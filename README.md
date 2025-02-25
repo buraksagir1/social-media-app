@@ -26,8 +26,7 @@ Material UI - For designing a sleek and modern UI
  
 Follow these steps to set up the project:
 
-1- Clone the repository: git clone https://github.com/username/social-media-app.git
-cd social-media-app
+1- Clone the repository
 
 2- Install dependencies: npm install
  
