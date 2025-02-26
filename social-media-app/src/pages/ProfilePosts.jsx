@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Avatar, Box, Container } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export default function ProfilePosts() {
     const users = useSelector((state) => state.data.users);
@@ -21,11 +22,11 @@ export default function ProfilePosts() {
 
     return (
         <Container maxWidth={"lg"}>
-            <Box mt={10} gap={4} display={"flex"} justifyContent={"center"}>
-                <Box>
-                    <h4 style={{ cursor: "pointer" }} onClick={() => (navigate("/profile/" + displayedUser.userId))}>Geri Dön</h4>
+            <Box mt={10} gap={8} display={"flex"} justifyContent={"center"}>
+                <Box width={"10%"}>
+                    <h4 style={{ cursor: "pointer" }} onClick={() => (navigate("/profile/" + displayedUser.userId))}><ArrowBackIcon /></h4>
                 </Box>
-                <Box display={"flex"} flexDirection={"column"} >
+                <Box width={"40%"} display={"flex"} flexDirection={"column"} >
                     <img style={{ width: { md: "45%", sm: "45%", xs: "45%" }, maxWidth: "460px" }} src={displayedPost.image} alt="" />
                     <Box mt={2}>
                         <h4>{displayedPost.likes} Beğenme</h4>
@@ -36,7 +37,7 @@ export default function ProfilePosts() {
 
                     </Box>
                 </Box>
-                <Box display={"flex"} rowGap={2} flexDirection={"column"}>
+                <Box width={"30%"} display={"flex"} rowGap={2} flexDirection={"column"}>
                     <h3>Yorumlar</h3>
                     {displayedPost.comments.map((comment) => (
                         <Box alignItems={"center"} gap={1} style={{ display: "flex", paddingLeft: "7px" }}>
