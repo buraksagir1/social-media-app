@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-
+// yeni profile
 const ProfilePage = () => {
     const { userId } = useParams()
     const users = useSelector((state) => (state.data.users));
@@ -15,9 +15,9 @@ const ProfilePage = () => {
     return (
 
         <Container maxWidth="lg">
-            <Sidebar />
+            <Sidebar style={{ width: "15%" }} />
             <Box display={"flex"} flexDirection={"column"}>
-                <Box display={"flex"} alignItems={"center"} ml={50} mt={10} columnGap={3}>
+                <Box sx={{ width: "75%" }} display={"flex"} alignItems={"center"} ml={50} mt={10} columnGap={3}>
                     <Box>
                         <Avatar style={{ width: "150px", height: "150px" }} src={displayedUser.avatar} alt="" />
                     </Box>
@@ -35,8 +35,8 @@ const ProfilePage = () => {
 
                     </Box>
                 </Box>
-                <Box ml={20} mt={5}>
-                    <Grid container spacing={"5px"}>
+                <Box sx={{ width: "75%" }} ml={20} mt={5}>
+                    <Grid container spacing={14} ml={3}>
                         {displayedUser.posts.map((post) => (
                             <Grid item xs={12} sm={6} md={4} key={post.postId}>
                                 <Box style={{ cursor: "pointer" }} onClick={() => (navigate("/profile/" + displayedUserId + "/" + post.postId))}
@@ -60,4 +60,6 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+
+
 
