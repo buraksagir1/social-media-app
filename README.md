@@ -38,6 +38,10 @@ Full Backend Integration (Node.js & MongoDB / Firebase)
 Messaging System (Direct Messages)
 Video and Photo Upload Support
 
+Contact:
+If you have any questions or feedback, feel free to reach out via:
+Email: enes36123@hotmail.com
+
 
 
  
