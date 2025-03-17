@@ -31,9 +31,7 @@ Follow these steps to set up the project:
 2- Go to root of the file in the terminal: 
 cd social-media-app 
 
-
-3- Install dependencies:
-npm install
+3-Go to the root directory of the project. To install the necessary dependencies: npm install
 
 4- Start the project: npm run dev
 
