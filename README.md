@@ -28,8 +28,10 @@ Follow these steps to set up the project:
 
 1- Clone the repository
 
-2- Install dependencies: npm install
- 
+2- Install dependencies:
+
+npm install
+cd social-media-app 
 3- Start the project: npm run dev
 
  Future Updates
